@@ -132,7 +132,7 @@ public static class Assessment3MaterialsBuilder
         }
         tex.SetPixels(colors);tex.Apply();string path=Root+"Sprites/Tiles/"+name+".png";
         File.WriteAllBytes(path,tex.EncodeToPNG());UnityEngine.Object.DestroyImmediate(tex);AssetDatabase.ImportAsset(path);
-        var importer=(TextureImporter)AssetImporter.GetAtPath(path);importer.textureType=TextureImporterType.Sprite;
+        var importer=(TextureImporter)AssetImporter.GetAtPath(path);importer.textureType=TextureImporterType.Sprite;importer.spriteImportMode=SpriteImportMode.Single;
         importer.spritePixelsPerUnit=64;importer.mipmapEnabled=false;importer.filterMode=FilterMode.Point;
         importer.textureCompression=TextureImporterCompression.Uncompressed;importer.SaveAndReimport();
         return AssetDatabase.LoadAssetAtPath<Sprite>(path);

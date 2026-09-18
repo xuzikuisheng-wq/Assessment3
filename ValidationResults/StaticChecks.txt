@@ -1,0 +1,57 @@
+PASS: Generator references assigned
+PASS: Four saved manual quadrants before Play
+PASS: 660 nonempty cells in saved manual map
+PASS: Default 29 by 28 mirror dimensions
+PASS: Generated orientation matches every manual table entry
+PASS: Alternative 4 by 4 quadrant solves as 7 by 8
+PASS: Isolated corner rejected
+PASS: 46 animation clips
+PASS: Six animator controllers
+PASS: Eleven audio clips
+PASS: Distinct animation frames: Dead
+PASS: Distinct animation frames: Recovering
+PASS: Distinct animation frames: Scared_Down
+PASS: Distinct animation frames: Scared_Left
+PASS: Distinct animation frames: Scared_Right
+PASS: Distinct animation frames: Scared_Up
+PASS: Distinct animation frames: Walk_Down
+PASS: Distinct animation frames: Walk_Left
+PASS: Distinct animation frames: Walk_Right
+PASS: Distinct animation frames: Walk_Up
+PASS: Distinct animation frames: Dead
+PASS: Distinct animation frames: Recovering
+PASS: Distinct animation frames: Scared_Down
+PASS: Distinct animation frames: Scared_Left
+PASS: Distinct animation frames: Scared_Right
+PASS: Distinct animation frames: Scared_Up
+PASS: Distinct animation frames: Walk_Down
+PASS: Distinct animation frames: Walk_Left
+PASS: Distinct animation frames: Walk_Right
+PASS: Distinct animation frames: Walk_Up
+PASS: Distinct animation frames: Dead
+PASS: Distinct animation frames: Recovering
+PASS: Distinct animation frames: Scared_Down
+PASS: Distinct animation frames: Scared_Left
+PASS: Distinct animation frames: Scared_Right
+PASS: Distinct animation frames: Scared_Up
+PASS: Distinct animation frames: Walk_Down
+PASS: Distinct animation frames: Walk_Left
+PASS: Distinct animation frames: Walk_Right
+PASS: Distinct animation frames: Walk_Up
+PASS: Distinct animation frames: Dead
+PASS: Distinct animation frames: Recovering
+PASS: Distinct animation frames: Scared_Down
+PASS: Distinct animation frames: Scared_Left
+PASS: Distinct animation frames: Scared_Right
+PASS: Distinct animation frames: Scared_Up
+PASS: Distinct animation frames: Walk_Down
+PASS: Distinct animation frames: Walk_Left
+PASS: Distinct animation frames: Walk_Right
+PASS: Distinct animation frames: Walk_Up
+PASS: Distinct animation frames: Dead
+PASS: Distinct animation frames: Walk_Down
+PASS: Distinct animation frames: Walk_Left
+PASS: Distinct animation frames: Walk_Right
+PASS: Distinct animation frames: Walk_Up
+PASS: Distinct animation frames: Pulse
+Error count: 0

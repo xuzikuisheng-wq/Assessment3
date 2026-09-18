@@ -39,6 +39,8 @@ public static class AssessmentValidation
             EditorSceneManager.OpenScene("Assets/Scenes/RecreatedLevel.unity");
             var g = UnityEngine.Object.FindAnyObjectByType<LevelGenerator>();
             Check(g && g.manualLevel && g.levelCamera && g.tilePrefabs.Skip(1).All(x => x), "Generator references assigned");
+            Check(g.tilePrefabs.Skip(1).All(x => x.GetComponent<SpriteRenderer>().sprite), "Every tile prefab has a sprite reference");
+            Check(g.manualLevel.GetComponentsInChildren<SpriteRenderer>().All(x => x.sprite), "Every saved map tile has a sprite reference");
             Check(g.manualLevel.transform.childCount == 4, "Four saved manual quadrants before Play");
             Check(g.manualLevel.GetComponentsInChildren<SpriteRenderer>().Length == 660, "660 nonempty cells in saved manual map");
             var whole = LevelGenerator.Mirror(g.levelMap); var masks = TileConnections.Solve(whole);
@@ -71,6 +73,7 @@ public static class AssessmentValidation
         if (state == PlayModeStateChange.EnteredPlayMode && stage > 0)
         {
             results.Clear(); seen.Clear(); errors = 0; lastTime = -1; captured = musicChecked = introChecked = mapChecked = false;
+            Application.runInBackground = true;
         }
         if (state != PlayModeStateChange.EnteredEditMode) return;
         if (stage == 2)
