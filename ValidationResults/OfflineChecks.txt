@@ -1,0 +1,38 @@
+Offline checks only. Unity Play mode validation has not yet completed.
+Unity assembly static compilation: PASS (no errors or warnings).
+Default mirrored map: 29 rows x 28 columns; 660 nonempty cells.
+All 166 source-table types and orientations: PASS.
+Alternate 7 x 8 map: PASS. Isolated corner rejection: PASS.
+Source SHA256 unchanged: True Audio Clips\Music\BGM_Dead.wav
+Source SHA256 unchanged: True Audio Clips\Music\BGM_Intro.wav
+Source SHA256 unchanged: True Audio Clips\Music\BGM_Normal.wav
+Source SHA256 unchanged: True Audio Clips\Music\BGM_Scared.wav
+Source SHA256 unchanged: True Audio Clips\Music\BGM_StartScene.wav
+Source SHA256 unchanged: True Audio Clips\SFX\SFX_Bonus.wav
+Source SHA256 unchanged: True Audio Clips\SFX\SFX_EatGhost.wav
+Source SHA256 unchanged: True Audio Clips\SFX\SFX_Move.wav
+Source SHA256 unchanged: True Audio Clips\SFX\SFX_Pellet.wav
+Source SHA256 unchanged: True Audio Clips\SFX\SFX_PlayerDeath.wav
+Source SHA256 unchanged: True Audio Clips\SFX\SFX_Wall.wav
+Source SHA256 unchanged: True Editor\Assessment3MaterialsBuilder.cs
+Source SHA256 unchanged: True SourceSheets\Drone01_Scared.png
+Source SHA256 unchanged: True SourceSheets\Drone01.png
+Source SHA256 unchanged: True SourceSheets\Drone02_Scared.png
+Source SHA256 unchanged: True SourceSheets\Drone02.png
+Source SHA256 unchanged: True SourceSheets\Drone03_Scared.png
+Source SHA256 unchanged: True SourceSheets\Drone03.png
+Source SHA256 unchanged: True SourceSheets\Drone04_Scared.png
+Source SHA256 unchanged: True SourceSheets\Drone04.png
+Source SHA256 unchanged: True SourceSheets\ItemsTiles.png
+Source SHA256 unchanged: True SourceSheets\Player.png
+BGM_Dead.wav: 2 channels, 44100 Hz, 16 bit, 10.00 seconds, peak 0.640
+BGM_Intro.wav: 2 channels, 44100 Hz, 16 bit, 2.40 seconds, peak 0.700
+BGM_Normal.wav: 2 channels, 44100 Hz, 16 bit, 16.00 seconds, peak 0.640
+BGM_Scared.wav: 2 channels, 44100 Hz, 16 bit, 12.00 seconds, peak 0.640
+BGM_StartScene.wav: 2 channels, 44100 Hz, 16 bit, 19.20 seconds, peak 0.640
+SFX_Bonus.wav: 2 channels, 44100 Hz, 16 bit, 0.85 seconds, peak 0.720
+SFX_EatGhost.wav: 2 channels, 44100 Hz, 16 bit, 0.55 seconds, peak 0.730
+SFX_Move.wav: 2 channels, 44100 Hz, 16 bit, 0.60 seconds, peak 0.600
+SFX_Pellet.wav: 2 channels, 44100 Hz, 16 bit, 0.20 seconds, peak 0.660
+SFX_PlayerDeath.wav: 2 channels, 44100 Hz, 16 bit, 1.45 seconds, peak 0.730
+SFX_Wall.wav: 2 channels, 44100 Hz, 16 bit, 0.24 seconds, peak 0.700

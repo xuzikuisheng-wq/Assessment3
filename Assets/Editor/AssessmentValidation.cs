@@ -75,6 +75,8 @@ public static class AssessmentValidation
         if (state != PlayModeStateChange.EnteredEditMode) return;
         if (stage == 2)
         {
+            results.Clear(); results.AddRange(File.ReadAllLines("ValidationResults/MainRuntimeChecks.txt"));
+            errors = int.Parse(File.ReadAllText("ValidationResults/MainErrorCount.txt"));
             var manual = GameObject.Find("ManualLevel01");
             Check(manual && !GameObject.Find("GeneratedLevel"), "Manual map restored after stopping Play");
             Save("MainRuntimeChecks.txt");
@@ -86,7 +88,7 @@ public static class AssessmentValidation
         {
             SessionState.SetInt(StageKey, 0);
             EditorSceneManager.OpenScene("Assets/Scenes/RecreatedLevel.unity");
-            int total = errors + int.Parse(File.ReadAllText("ValidationResults/StaticErrorCount.txt")) + int.Parse(File.ReadAllText("ValidationResults/MainErrorCount.txt"));
+            int total = int.Parse(File.ReadAllText("ValidationResults/AnimationErrorCount.txt")) + int.Parse(File.ReadAllText("ValidationResults/StaticErrorCount.txt")) + int.Parse(File.ReadAllText("ValidationResults/MainErrorCount.txt"));
             File.WriteAllText("ValidationResults/Result.txt", "Unity " + Application.unityVersion + "\nCompleted: " + DateTime.Now.ToString("O") + "\nError count: " + total + "\n" + (total == 0 ? "PASS" : "FAIL") + "\nAudio playback state checked; listening still requires a human.\n");
             Debug.Log("ASSESSMENT3_VALIDATION_FINISHED: " + total + " errors");
         }
@@ -132,6 +134,7 @@ public static class AssessmentValidation
                     Check(player.GetComponent<AudioSource>().isPlaying, "Movement sound plays");
                     Check(seen.ContainsKey("PacStudent") && seen["PacStudent"].Count == 4, "Four movement directions observed");
                     Check(music.isPlaying && music.loop && music.clip.name == "BGM_Normal", "Normal music continues beyond a complete loop");
+                    Save("MainRuntimeChecks.txt"); File.WriteAllText("ValidationResults/MainErrorCount.txt", errors.ToString());
                     SessionState.SetInt(StageKey, 2); EditorApplication.isPlaying = false;
                 }
             }
@@ -143,7 +146,8 @@ public static class AssessmentValidation
                     Check(!GameObject.Find("PacStudent").GetComponent<PacStudentMovement>(), "Lab has no movement component");
                     Check(seen.ContainsKey("PacStudent") && seen["PacStudent"].Count == 5, "Five player showcase states observed");
                     for (int i=1;i<=4;i++) Check(seen.ContainsKey("Drone0"+i) && seen["Drone0"+i].Count == 10, "All ten states observed for Drone0"+i);
-                    Save("AnimationRuntimeChecks.txt"); SessionState.SetInt(StageKey, 4); EditorApplication.isPlaying = false;
+                    Save("AnimationRuntimeChecks.txt"); File.WriteAllText("ValidationResults/AnimationErrorCount.txt", errors.ToString());
+                    SessionState.SetInt(StageKey, 4); EditorApplication.isPlaying = false;
                 }
             }
         }
